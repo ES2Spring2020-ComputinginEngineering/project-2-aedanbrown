@@ -20,6 +20,7 @@ def normalizeData(glucose, hemoglobin, classification):
     return normalGlucose, normalHemoglobin, normalClassification
 
 def graphData(glucose, hemoglobin, classification):
+    
     plt.figure()
     plt.suptitle("Normalized Glucose vs Normalized Hemoglobin")
     plt.plot(hemoglobin[classification==1],glucose[classification==1], "k.", label = "Class 1")
@@ -30,6 +31,7 @@ def graphData(glucose, hemoglobin, classification):
     plt.show()
     
 def createTestCase():
+    
     newHemoglobin = random.randrange(0,10000)/10000
     newGlucose = random.randrange(0,10000)/10000
 
@@ -76,11 +78,10 @@ def kNearestNeighborClassifier(k,newglucose,newhemoglobin,glucose,hemoglobin,cla
     
     classification_list = []
     
-    for ele in sorted_dist:
-        classification_list.append(classification[ele])
+    for i in range(k):
+        classification_list.append(classification[sorted_dist[i]])
     
-    
-    if classification_list[0:k].count(1) > classification_list[0:k].count(0):
+    if classification_list.count(1) > classification_list.count(0):
         return 1
     else:
         return 0
