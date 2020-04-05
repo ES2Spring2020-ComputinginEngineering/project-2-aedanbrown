@@ -17,14 +17,14 @@ Functions in NearestNeighborClassification.py:
 
 normalizeData(glucose, hemoglobin, classification)
 - normalizeData normalizes the data to be on a 0 to 1 unitless scale
-- It takes in two arguments
-        - glucose is an array of the original glucose values
-        - hemoglobin is an array of the original hemoglobin values
-        - classification is an array of the original classification values
-- It returns an three arrays: 
-        - normal_glucose is an array of the the normalized glucose 
-        - normal_hemoglobin is an array of the normalized hemoglobin values
-        - normal_class is an array of the normalized classification values
+- It takes in two arguments:
+  - glucose is an array of the original glucose values
+  - hemoglobin is an array of the original hemoglobin values
+  - classification is an array of the original classification values
+- It returns three arrays: 
+  - normal_glucose is an array of the the normalized glucose 
+  - normal_hemoglobin is an array of the normalized hemoglobin values
+  - normal_class is an array of the normalized classification values
 
 graphData(glucose, hemoglobin, classification)    
 -graphData graphs the normalized data; each classification has a different color
