@@ -13,7 +13,7 @@ If you want to classify your own unknown observation, replacing new_glucose and 
 normalized values will cause the code to print out the classification using both methods.
 
 
-# Functions in NearestNeighborClassification.py:
+### Functions in NearestNeighborClassification.py:
 
 normalizeData(glucose, hemoglobin, classification)
 - normalizeData normalizes the data to be on a 0 to 1 unitless scale
@@ -106,7 +106,7 @@ can only support four clusters currently. Changing the number of features of an 
 would need new parameters and some would need to be reworked (e.g. the 2-D distance formula would need to be changed to 3-D)
 
 
-# Functions in KMeansClustering_functions.py:
+### Functions in KMeansClustering_functions.py:
 
 createCentroids(k)   
 - createCentroids makes random centroids to start the algorithm
