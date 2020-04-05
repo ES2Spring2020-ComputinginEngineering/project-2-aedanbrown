@@ -27,64 +27,64 @@ normalizeData(glucose, hemoglobin, classification)
   - normal_class is an array of the normalized classification values
 
 graphData(glucose, hemoglobin, classification)    
--graphData graphs the normalized data; each classification has a different color
--It takes in three arguments:
-        -glucose is an array of the normalized glucose values
-        -hemoglobin is an array of the normalied hemoglobin values
-        -classification is an array that represents each data point's classification
--It doesn't return anything
+- graphData graphs the normalized data; each classification has a different color
+- It takes in three arguments:
+  - glucose is an array of the normalized glucose values
+  - hemoglobin is an array of the normalied hemoglobin values
+  - classification is an array that represents each data point's classification
+- It doesn't return anything
    
 
 createTestCase()
--createTestCase creates a new test case
--It doesn't take any arguments
--It returns two integers:
-        -new_hemoglobin represents the hemoglobin value of the test case
-        -new_glucose represents the glucose value of the test case
+- createTestCase creates a new test case
+- It doesn't take any arguments
+- It returns two integers:
+  - new_hemoglobin represents the hemoglobin value of the test case
+  - new_glucose represents the glucose value of the test case
 
 
 calculateDistanceArray(glucose_test, hemoglobin_test, glucose, hemoglobin)
--calculateDistanceArray calculates the distance between each data point and the test case
--It takes in four arguments:
-        -glucose_test is the glucose value of the test case
-        -hemoglobin_test is the hemoglobin value of the test case
-        -glucose is the array of the normalized glucose values
-        -hemoglobin is the array of the normalized hemoglobin values
--It returns an array of the distance from the test case to each data point
+- calculateDistanceArray calculates the distance between each data point and the test case
+- It takes in four arguments:
+  - glucose_test is the glucose value of the test case
+  - hemoglobin_test is the hemoglobin value of the test case
+  - glucose is the array of the normalized glucose values
+  - hemoglobin is the array of the normalized hemoglobin values
+- It returns an array of the distance from the test case to each data point
 
 
 nearestNeighborClassifier(glucose_test,hemoglobin_test, glucose, hemoglobin, classification)
--nearestNeighborClassifier classifies a test case using the nearest neighbor method
--It takes five arguments:
-        -glucose_test is the glucose value of the test case
-        -hemoglobin_test is the hemoglobin value of the test case
-        -glucose is the array of the normalized glucose values
-        -hemoglobin is the array of the normalized hemoglobin values
-        -classification is an array that represents each data point's classification
--It returns an interger representing the classification of the nearest neighbor
+- nearestNeighborClassifier classifies a test case using the nearest neighbor method
+- It takes five arguments:
+  - glucose_test is the glucose value of the test case
+  - hemoglobin_test is the hemoglobin value of the test case
+  - glucose is the array of the normalized glucose values
+  - hemoglobin is the array of the normalized hemoglobin values
+  - classification is an array that represents each data point's classification
+- It returns an interger representing the classification of the nearest neighbor
 
 
 graphTestCase(glucose_test, hemoglobin_test, glucose, hemoglobin, classification)
--graphData graphs the normalized data and the test case
--It takes in five arguments:
-        -glucose_test is the glucose value of the test case
-        -hemoglobin_test is the hemoglobin value of the test case      
-        -glucose is an array of the normalized glucose values
-        -hemoglobin is an array of the normalied hemoglobin values
-        -classification is an array that represents each data point's classification
--It doesn't return anything
+- graphData graphs the normalized data and the test case
+- It takes in five arguments:
+  - glucose_test is the glucose value of the test case
+  - hemoglobin_test is the hemoglobin value of the test case      
+  - glucose is an array of the normalized glucose values
+  - hemoglobin is an array of the normalied hemoglobin values
+  - classification is an array that represents each data point's classification
+- It doesn't return anything
 
 
 kNearestNeighborClassifier(k,glucose_test,hemoglobin_test,glucose,hemoglobin,classification)
--kNearestNeighborClassifier classifies a test case using the k-nearest neighbor method
--It takes six arguments:
-	-k is the number of neighbors that should be looked at; it should be odd
-        -glucose_test is the glucose value of the test case
-        -hemoglobin_test is the hemoglobin value of the test case
-        -glucose is the array of the normalized glucose values
-        -hemoglobin is the array of the normalized hemoglobin values
-        -classification is an array that represents each data point's classification
--It returns an interger representing the classification of the nearest neighbor
+- kNearestNeighborClassifier classifies a test case using the k-nearest neighbor method
+- It takes six arguments:
+  - k is the number of neighbors that should be looked at; it should be odd
+  - glucose_test is the glucose value of the test case
+  - hemoglobin_test is the hemoglobin value of the test case
+  - glucose is the array of the normalized glucose values
+  - hemoglobin is the array of the normalized hemoglobin values
+  - classification is an array that represents each data point's classification
+- It returns an interger representing the classification of the nearest neighbor
 
 
 
@@ -109,46 +109,46 @@ would need new parameters and some would need to be reworked (e.g. the 2-D dista
 Functions in KMeansClustering_functions.py:
 
 createCentroids(k)   
-    -createCentroids makes random centroids to start the algorithm
-    -It takes in one argument:
-        -k is an integer representing the number of centroids to be created
--It returns an array representing the centroids
+- createCentroids makes random centroids to start the algorithm
+- It takes in one argument:
+  - k is an integer representing the number of centroids to be created
+- It returns an array representing the centroids
 
 
 normalizeData(glucose, hemoglobin)   
--normalizeData normalizes the data to be on a 0 to 1 unitless scale
--It takes in two arguments
-        -glucose is an array of the original glucose values
-        -hemoglobin is an array of the original hemoglobin values
--It returns an two arrays: the normalized glucose and hemoglobin values
+- normalizeData normalizes the data to be on a 0 to 1 unitless scale
+- It takes in two arguments
+  - glucose is an array of the original glucose values
+  - hemoglobin is an array of the original hemoglobin values
+- It returns an two arrays: the normalized glucose and hemoglobin values
 
 
 assignCentroid(centroids, glucose, hemoglobin)
--assignCentroids assigns a centroid to each data point
--It takes in three arguments
-            -centroids is an array representing the location of the centroids
-            -glucose is an array of the normalized glucose values
-            -hemoglobin is an array of the normalized hemoglobin values
--It returns an array that shows which centroid each data point is assigned to
+- assignCentroids assigns a centroid to each data point
+- It takes in three arguments
+  - centroids is an array representing the location of the centroids
+  - glucose is an array of the normalized glucose values
+  - hemoglobin is an array of the normalized hemoglobin values
+- It returns an array that shows which centroid each data point is assigned to
 
 
 calculateMean(centroid_assign, glucose, hemoglobin)
--calculateMean calculates the mean of the data associated to each centroid
--It takes in three arguments:
-        -centroid_assign is an array that shows which centroid each data point is assigned to
-        -glucose is an array of the normalized glucose values
-        -hemoglobin is an array of the normalized hemoglobin values
--It returns an array representing the mean values of each cluster
+- calculateMean calculates the mean of the data associated to each centroid
+- It takes in three arguments:
+  - centroid_assign is an array that shows which centroid each data point is assigned to
+  - glucose is an array of the normalized glucose values
+  - hemoglobin is an array of the normalized hemoglobin values
+- It returns an array representing the mean values of each cluster
 
 
 plotClusters(centroids,centroid_assignment, glucose, hemoglobin)    
--plotClusters plots the data with different colors and symbols to represent each cluster
--It takes in four arguments:
-        -centroids is an array representing the location of the centroids
-        -centroid_assignment is an array that shows which centroid each data point is assigned to
-        -glucose is an array of the normalized glucose values
-        -hemoglobin is an array of the normalized hemoglobin values
--It doesn't return anything
+- plotClusters plots the data with different colors and symbols to represent each cluster
+- It takes in four arguments:
+  - centroids is an array representing the location of the centroids
+  - centroid_assignment is an array that shows which centroid each data point is assigned to
+  - glucose is an array of the normalized glucose values
+  - hemoglobin is an array of the normalized hemoglobin values
+- It doesn't return anything
 
 
 
