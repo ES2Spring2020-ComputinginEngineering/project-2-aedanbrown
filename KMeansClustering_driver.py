@@ -8,9 +8,9 @@ glucose_data, hemoglobin_data, classification_data = kmc.openckdfile()
 
 norm_glucose, norm_hemoglobin = kmc.normalizeData(glucose_data,hemoglobin_data)
 
-centroids = kmc.createCentroids(num_centroids)
+centroids = kmc.createCentroids(num_centroids) #Select random centroids
 
-while True:
+while True: #This will interate the process
     
     centroid_assign = kmc.assignCentroid(centroids,norm_glucose,norm_hemoglobin)
     #Assign each data point to a centroid
@@ -19,8 +19,8 @@ while True:
     #Create an array of the means of each cluster of data points
     
     if np.array_equal(centroids,mean_array): #Check to see if the centroids
-                                              #will change
-        break
+                                             #will change
+        break                                #If it doesn't, leave the loop
 
     centroids = mean_array
     #Reassign the means of each cluster to be the new centroids

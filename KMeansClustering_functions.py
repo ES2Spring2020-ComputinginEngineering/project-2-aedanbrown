@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
-
 def openckdfile():
     glucose, hemoglobin, classification = np.loadtxt('ckd.csv', delimiter=',', skiprows=1, unpack=True)
     return glucose, hemoglobin, classification
@@ -69,11 +68,10 @@ def assignCentroid(centroids, glucose, hemoglobin):
         #Will store which centroid each observation is assigned to
         
         for i in range(len(centroid_assign)):
-    
+        
             centroid_assign[i] = np.argmin(distance[:,i])
             #Store the index of the min value (This is the centroid number)
-
-
+            
         all_values = np.zeros(len(centroids[0]))
         #Create an array of zeros with a number of entries 
         #equal to the number of centroids
@@ -105,9 +103,9 @@ def assignCentroid(centroids, glucose, hemoglobin):
             #this function again, with new centroids.
             
             #This technically could reach the maximum recursion depth, 
-            #but that is very unlikely as every time, 
-            #there would have to be a centroid that 
-            #doesn't have an observation assigned to it every time.
+            #but that is very unlikely at low numbers of centroids,
+            #as every time, there would have to be a centroid that 
+            #doesn't have an observation assigned to it.
             
             #The chances increase as the number of centroids increase,
             #so if a large number of centroids is used, 
