@@ -12,6 +12,7 @@ centroids = kmc.createCentroids(num_centroids) #Select random centroids
 
 while True: #This will interate the process
     
+    
     centroid_assign = kmc.assignCentroid(centroids,norm_glucose,norm_hemoglobin)
     #Assign each data point to a centroid
     

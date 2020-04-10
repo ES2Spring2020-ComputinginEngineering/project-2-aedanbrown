@@ -123,13 +123,17 @@ def graphTestCase(glucose_test, hemoglobin_test, glucose, hemoglobin, classifica
     plt.figure()
     plt.suptitle("Normalized Glucose vs Normalized Hemoglobin")
     plt.plot(hemoglobin[classification==1],glucose[classification==1],
-                                                     "k.", label = "Class 1", alpha = 0.3)
+                                                     "k.", label = "Class 1", 
+                                                     alpha = 0.3)
     plt.plot(hemoglobin[classification==0],glucose[classification==0], 
-                                                     "r.", label = "Class 0", alpha = 0.3)
+                                                     "r.", label = "Class 0", 
+                                                     alpha = 0.3)
     if classification_num == 1:
-        plt.plot(hemoglobin_test, glucose_test, "kx", label = "Test Case", markersize = 10)
+        plt.plot(hemoglobin_test, glucose_test, "kx", label = "Test Case", 
+                                                             markersize = 10)
     else:
-        plt.plot(hemoglobin_test, glucose_test, "rx", label = "Test Case", markersize = 10)
+        plt.plot(hemoglobin_test, glucose_test, "rx", label = "Test Case", 
+                                                             markersize = 10)
     
     plt.xlabel("Normalized Hemoglobin")
     plt.ylabel("Normalized Glucose")

@@ -99,11 +99,12 @@ KMeansClustering_driver.py contains the main body of the code for the k-means cl
 KMeansClustering_functions.py contains the functions that KMeansClustering_driver.py calls
 
 KMeansClustering_driver.py currently contains code to open ckd.csv (also in this repository) and then use the data contained to perform the k-means
-clustering algorithm with 2 clusters. A graph is then generated, showing the clusters and the centroids. The arrays representing the centroids and  All of the functions currently operate 
-under the assumption that only two feature were recorded about each observation. To change the number of clusters, change the num_centroids variable in
-line 5 of KMeansClustering_driver.py. The general algorithm should work for up to ~15 clusters. However, plotClusters in KMeansClustering_functions.py 
-can only support four clusters currently. Changing the number of features of an observation would require new variables to be introduced and the functions
-would need new parameters and some would need to be reworked (e.g. the 2-D distance formula would need to be changed to 3-D)
+clustering algorithm with 2 clusters. A graph is generated, showing the clusters and the centroids, and the arrays containing the centroids and 
+the classifictions are printed. The arrays representing the centroids and all of the functions currently operate under the assumption that only two 
+features were recorded about each observation. To change the number of clusters, change the num_centroids variable in line 5 of KMeansClustering_driver.py. 
+The general algorithm should work for up to ~15 clusters. However, plotClusters in KMeansClustering_functions.py can only support four clusters currently. 
+Changing the number of features of an observation would require new variables to be introduced and the functions would need new parameters 
+and some would need to be reworked (e.g. the 2-D distance formula would need to be changed to 3-D)
 
 
 ### Functions in KMeansClustering_functions.py:
